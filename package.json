@@ -1,4 +1,5 @@
 {
+  "homepage": "https://DR7-ZOMBIE.github.io/paramo-ctf-colombia-20250223/",
   "name": "paramo-ctf-colombia-20250223",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
