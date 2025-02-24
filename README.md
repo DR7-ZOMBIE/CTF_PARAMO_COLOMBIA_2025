@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ![Páramo CTF Logo](./src/assets/Logo_Paramo_CTF.png) Páramo CTF Colombia 2025
 
 ¡Bienvenido a **Páramo CTF Colombia 2025**! Este evento GRATUITO de ciberseguridad te reúne con talentos y entusiastas para vivir una experiencia única. ¡Descubre, aprende y compite en el fascinante mundo de la ciberseguridad!
@@ -69,3 +70,13 @@ Sígueme en LinkedIn para conocer las últimas novedades:
 Páramo CTF Colombia 2025 es más que un evento; es una oportunidad para conectar, aprender y competir en el mundo de la ciberseguridad. ¡No te quedes fuera y únete a esta experiencia inolvidable!
 
 *¡Cupos limitados!*
+=======
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>>>>>>> f704fb7 (Subiendo version funcional)
