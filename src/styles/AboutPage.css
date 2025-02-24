@@ -1,0 +1,94 @@
+/* src/styles/AboutPage.css */
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+
+/* Sección hero con un fondo suave y texto centrado */
+.about-page__hero {
+  width: 100%;
+  background: linear-gradient(to right, #eff6ff, #ffffff, #eff6ff);
+  padding: 4rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c; /* gris oscuro */
+  margin-bottom: 1rem;
+}
+
+.about-page__subtitle {
+  font-size: 1.25rem;
+  color: #4a5568; /* gris medio */
+}
+
+/* Contenedor principal del texto */
+.about-page__content {
+  max-width: 800px; /* Limita el ancho para que el texto sea más legible */
+  margin: 0 auto 3rem auto; /* Centra y añade margen inferior */
+  padding: 0 1rem; /* Pequeño padding lateral */
+  color: #4a5568;
+  line-height: 1.6;
+  text-align: justify; /* Justifica el texto para un look más formal */
+}
+
+.about-page__content p {
+  margin-bottom: 1.5rem; /* Espacio entre párrafos */
+}
+
+/* Sección para el carrusel de herramientas */
+.about-page__tools {
+  width: 100%;
+  max-width: 1024px; /* Similar a tu container en otros componentes */
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.about-page__tools-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Aumenta el padding horizontal */
+  padding: 1rem 2rem; /* 1rem arriba/abajo, 2rem a los lados */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-page {
+  /* Si el navbar mide ~64px de alto, compensamos aquí */
+  margin-top: 64px;
+  /* Resto de estilos */
+}
+
+.about-page__hero {
+  width: 100%;
+  background: linear-gradient(to right, #eff6ff, #ffffff, #eff6ff);
+  /* Reduce el padding si no quieres tanto espacio vertical */
+  padding: 2rem 1rem; 
+  text-align: center;
+  margin-bottom: 1rem; /* Ajusta si deseas menos separación debajo */
+}
+
+.about-page__hero p {
+  margin: 0; 
+}

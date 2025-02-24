@@ -1,0 +1,132 @@
+/* Navbar.css */
+
+/* Contenedor principal del navbar */
+.navbar {
+  background-color: #ffffff; /* bg-white */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-sm */
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+
+/* Contenedor interno para centrar el contenido */
+.navbar__container {
+  max-width: 1200px;             /* Contenedor centrado */
+  margin: 0 auto;                /* mx-auto */
+  padding: 0.75rem 1rem;          /* py-3 (0.75rem vertical) y px-4 (1rem horizontal) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo para el logo */
+.navbar__logo {
+  font-size: 1.5rem;             /* text-2xl */
+  font-weight: bold;
+  color: #1a202c;                /* text-gray-900 */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.navbar__logo:hover {
+  color: #3182ce;                /* hover:text-blue-600 */
+}
+
+/* Lista de enlaces en desktop: Oculto en móviles */
+.navbar__links {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .navbar__links {
+    display: flex;
+    gap: 1.5rem;               /* space-x-6 */
+  }
+}
+
+/* Estilo para los enlaces de navegación */
+.navbar__link {
+  color: #4a5568;              /* text-gray-700 */
+  text-decoration: none;
+  font-weight: 500;            /* font-medium */
+  transition: color 0.2s ease-in-out;
+}
+.navbar__link:hover {
+  color: #3182ce;              /* hover:text-blue-600 */
+}
+
+/* Botón de llamada a la acción (Inscripción) */
+.navbar__cta {
+  background-color: #4299e1;   /* bg-blue-500 */
+  color: #ffffff;              /* text-white */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;      /* py-2 y px-5 */
+  border-radius: 0.375rem;      /* rounded-lg */
+  transition: background-color 0.2s ease-in-out;
+}
+.navbar__cta:hover {
+  background-color: #3182ce;   /* hover:bg-blue-600 */
+}
+
+/* Botón para el menú móvil */
+.navbar__mobile-btn {
+  background: none;
+  border: none;
+  color: #1a202c;              /* text-gray-900 */
+  cursor: pointer;
+  padding: 0;
+  display: block;
+}
+.navbar__mobile-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4299e1; /* focus:ring-2 focus:ring-blue-500 */
+  border-radius: 0.375rem;
+}
+@media (min-width: 768px) {
+  .navbar__mobile-btn {
+    display: none;
+  }
+}
+
+/* Menú móvil: visible en pantallas pequeñas */
+.navbar__mobile-menu {
+  display: block;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-md */
+  position: absolute;
+  top: 100%;                   /* top-full */
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;             /* py-4 */
+}
+@media (min-width: 768px) {
+  .navbar__mobile-menu {
+    display: none;
+  }
+}
+
+/* Lista interna del menú móvil */
+.navbar__mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;                   /* space-y-4 */
+}
+
+.navbar__logo {
+  margin-right: auto;
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;  /* Aumenta el padding horizontal */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

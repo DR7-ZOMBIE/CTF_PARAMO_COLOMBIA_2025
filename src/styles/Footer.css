@@ -1,0 +1,59 @@
+/* =========================================
+   src/styles/Footer.css
+========================================= */
+
+/* Estilo principal del footer */
+.footer {
+  background-color: #f7fafc;      /* Equivalente a bg-gray-100 */
+  color: #4a5568;                 /* Equivalente a text-gray-700 */
+  padding: 1.5rem 0;              /* py-6: 1.5rem arriba y abajo */
+  text-align: center;             /* text-center */
+  margin-top: 2.5rem;             /* mt-10: aprox. 2.5rem */
+  border-top: 1px solid #e2e8f0;   /* border-t border-gray-200 */
+}
+
+/* Contenedor centrado con padding horizontal */
+.footer__container {
+  width: 100%;
+  max-width: 1200px;              /* Ajusta según tu diseño */
+  margin: 0 auto;                 /* Centrado horizontal */
+  padding: 0 1rem;                /* px-4: 1rem a cada lado */
+}
+
+/* Estilo del párrafo */
+.footer__text {
+  font-size: 0.875rem;            /* Texto pequeño en móvil (text-sm) */
+}
+
+/* Para pantallas medianas, ajustamos el tamaño de fuente */
+@media (min-width: 400px) {
+  .footer__text {
+    font-size: 1rem;              /* md:text-base */
+  }
+}
+
+/* Resalta el nombre con mayor peso y color azul */
+.footer__highlight {
+  font-weight: 600;               /* font-semibold */
+  color: #4299e1;                 /* text-blue-500 */
+}
+
+/* Contenedor de enlaces */
+.footer__links {
+  margin-top: 0.75rem;            /* mt-3: 0.75rem */
+  display: flex;
+  justify-content: center;        /* Centra los enlaces */
+  gap: 1rem;                      /* Espacio horizontal entre elementos */
+}
+
+/* Estilo para cada enlace */
+.footer__link {
+  font-weight: 500;               /* font-medium */
+  color: inherit;                 /* Usa el color del contenedor */
+  transition: color 0.2s ease-in-out;
+}
+
+/* Cambio de color al pasar el mouse */
+.footer__link:hover {
+  color: #4299e1;                /* hover:text-blue-500 */
+}

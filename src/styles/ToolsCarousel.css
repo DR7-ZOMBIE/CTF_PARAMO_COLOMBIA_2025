@@ -1,0 +1,60 @@
+/* src/styles/ToolsCarousel.css */
+.tools-carousel {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.tools-carousel__container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.tools-carousel__title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.tools-carousel__slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.tools-carousel__slide {
+  display: flex;
+  justify-content: center;
+}
+
+.tools-carousel__item {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .tools-carousel__item {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.tools-carousel__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 300ms ease-in-out;
+}
+
+.tools-carousel__img:hover {
+  transform: scale(1.05);
+}
