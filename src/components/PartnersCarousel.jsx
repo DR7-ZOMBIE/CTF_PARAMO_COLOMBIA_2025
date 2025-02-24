@@ -1,11 +1,21 @@
+// PartnersCarousel.jsx
+
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../styles/PartnersCarousel.css";  // Importa el CSS personalizado
+import "../styles/PartnersCarousel.css";
+
+// Import images using relative paths (from src/components/ to src/assets)
+import velascoImg from "../assets/Velasco.png";
+import eiaImg from "../assets/EIA_Logo.png";
+import academiaImg from "../assets/Academia_Ciberseguridad_Logo.png";
+import eccouncilImg from "../assets/EC-COUNCIL.png";
+import owaspImg from "../assets/OWASP_black_logo.svg";
+import stcImg from "../assets/STC B1N cg.png";
+import certiprofImg from "../assets/Certiprof.png";
 
 const PartnersCarousel = () => {
-  // Configuración del carrusel
   const settings = {
     dots: true,
     infinite: true,
@@ -22,15 +32,15 @@ const PartnersCarousel = () => {
     ],
   };
 
-  // Lista de imágenes de los partners
+  // Build partners array with imported images
   const partners = [
-    { src: "src/assets/Velasco.png", name: "Partner 1" },
-    { src: "src/assets/EIA_Logo.png", name: "Partner 2" },
-    { src: "src/assets/Academia_Ciberseguridad_Logo.png", name: "Partner 3" },
-    { src: "src/assets/EC-COUNCIL.png", name: "Partner 4" },
-    { src: "src/assets/OWASP_black_logo.svg", name: "Partner 5" },
-    { src: "src/assets/STC B1N cg.png", name: "Partner 6" },
-    { src: "src/assets/Certiprof.png", name: "Partner 7" },
+    { src: velascoImg, name: "Partner 1" },
+    { src: eiaImg, name: "Partner 2" },
+    { src: academiaImg, name: "Partner 3" },
+    { src: eccouncilImg, name: "Partner 4" },
+    { src: owaspImg, name: "Partner 5" },
+    { src: stcImg, name: "Partner 6" },
+    { src: certiprofImg, name: "Partner 7" },
   ];
 
   return (
@@ -39,7 +49,6 @@ const PartnersCarousel = () => {
         <h2 className="partners-carousel__title">
           Nuestros <span className="partners-carousel__highlight">Partners</span>
         </h2>
-
         <div className="partners-carousel__slider-container">
           <Slider {...settings}>
             {partners.map((partner, index) => (

@@ -1,9 +1,20 @@
 // src/components/ToolsCarousel.jsx
+
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import "../styles/ToolsCarousel.css"; // Importa el CSS para ToolsCarousel
+import "../styles/ToolsCarousel.css";
+
+// Import images using relative paths (from src/components/ to src/assets/)
+import burpsuiteImg from "../assets/Burpsuite.png";
+import metasploitImg from "../assets/Metasploit.png";
+import wiresharkImg from "../assets/Wireshark.png";
+import johnImg from "../assets/John.png";
+import nmapImg from "../assets/nmap.png";
+import ghidraImg from "../assets/ghidra.png";
+import veracryptImg from "../assets/Veracrypt.png";
+import autopsyImg from "../assets/Autopsy.png";
 
 const ToolsCarousel = () => {
   const settings = {
@@ -22,16 +33,15 @@ const ToolsCarousel = () => {
     ],
   };
 
-  // Lista de imágenes de herramientas (ejemplo)
   const tools = [
-    { src: 'src/assets/Burpsuite.png', name: 'Burp Suite' },
-    { src: 'src/assets/Metasploit.png', name: 'Metasploit' },
-    { src: 'src/assets/Wireshark.png', name: 'Wireshark' },
-    { src: 'src/assets/John.png', name: 'John the Ripper' },
-    { src: 'src/assets/nmap.png', name: 'Nmap' },
-    { src: 'src/assets/ghidra.png', name: 'Ghidra' },
-    { src: 'src/assets/Veracrypt.png', name: 'Veracrypt' },
-    { src: 'src/assets/Autopsy.png', name: 'Autopsy' },
+    { src: burpsuiteImg, name: 'Burp Suite' },
+    { src: metasploitImg, name: 'Metasploit' },
+    { src: wiresharkImg, name: 'Wireshark' },
+    { src: johnImg, name: 'John the Ripper' },
+    { src: nmapImg, name: 'Nmap' },
+    { src: ghidraImg, name: 'Ghidra' },
+    { src: veracryptImg, name: 'Veracrypt' },
+    { src: autopsyImg, name: 'Autopsy' },
   ];
 
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/HeroSection.css"; // Importamos el CSS personalizado
+import logoParamoCTF from "../assets/Logo_Paramo_CTF.png";
 
 const HeroSection = () => {
   return (
@@ -25,7 +26,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="hero__logo">
-          <img src="src/assets/Logo_Paramo_CTF.png" alt="Logo de Páramo CTF Colombia" />
+          <img src={logoParamoCTF} alt="Logo de Páramo CTF Colombia" />
         </div>
       </div>
     </section>
