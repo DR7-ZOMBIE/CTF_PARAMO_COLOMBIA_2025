@@ -1,12 +1,8 @@
-// PartnersCarousel.jsx
-
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../styles/PartnersCarousel.css";
-
-// Import images using relative paths (from src/components/ to src/assets)
+// Importa las imágenes
 import velascoImg from "../assets/Velasco.png";
 import eiaImg from "../assets/EIA_Logo.png";
 import academiaImg from "../assets/Academia_Ciberseguridad_Logo.png";
@@ -32,7 +28,6 @@ const PartnersCarousel = () => {
     ],
   };
 
-  // Build partners array with imported images
   const partners = [
     { src: velascoImg, name: "Partner 1" },
     { src: eiaImg, name: "Partner 2" },
@@ -44,20 +39,20 @@ const PartnersCarousel = () => {
   ];
 
   return (
-    <section className="partners-carousel">
-      <div className="partners-carousel__container">
-        <h2 className="partners-carousel__title">
-          Nuestros <span className="partners-carousel__highlight">Partners</span>
+    <section className="bg-white py-16">
+      <div className="max-w-[1024px] mx-auto px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+          Nuestros <span className="text-blue-500">Partners</span>
         </h2>
-        <div className="partners-carousel__slider-container">
+        <div className="relative overflow-hidden">
           <Slider {...settings}>
             {partners.map((partner, index) => (
-              <div key={index} className="partners-carousel__slide-wrapper">
-                <div className="partners-carousel__item">
+              <div key={index} className="flex justify-center">
+                <div className="bg-gray-50 p-4 rounded shadow-md w-32 h-32 md:w-40 md:h-40 mx-auto flex items-center justify-center">
                   <img
                     src={partner.src}
                     alt={`Logotipo de ${partner.name}`}
-                    className="partners-carousel__img"
+                    className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105"
                   />
                 </div>
               </div>

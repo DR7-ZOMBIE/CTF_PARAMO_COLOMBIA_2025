@@ -1,11 +1,12 @@
 // src/App.jsx
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom"; // Use HashRouter
 import AboutPage from "./components/AboutPage";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
-// Importar estilos generales
+import ChallengesPage from "./components/ChallengesOverview";
+import TechnicalTalks from "./components/TechnicalTalks";
 import "./App.css";
 import "./index.css";
 
@@ -18,7 +19,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            {/* Otras rutas, por ejemplo para Inscripción, se pueden agregar aquí */}
+            <Route path="/challenges" element={<ChallengesPage />} />
+            <Route path="/speaks" element={<TechnicalTalks />} />
+            {/* Optional: Redirect all unmatched routes to HomePage */}
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
         <Footer />
@@ -28,3 +32,4 @@ function App() {
 }
 
 export default App;
+

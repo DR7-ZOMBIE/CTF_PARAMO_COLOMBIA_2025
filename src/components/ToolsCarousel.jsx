@@ -1,12 +1,9 @@
-// src/components/ToolsCarousel.jsx
-
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import "../styles/ToolsCarousel.css";
 
-// Import images using relative paths (from src/components/ to src/assets/)
+// Importamos las imágenes de las herramientas
 import burpsuiteImg from "../assets/Burpsuite.png";
 import metasploitImg from "../assets/Metasploit.png";
 import wiresharkImg from "../assets/Wireshark.png";
@@ -45,18 +42,20 @@ const ToolsCarousel = () => {
   ];
 
   return (
-    <section className="tools-carousel">
-      <div className="tools-carousel__container">
-        <h2 className="tools-carousel__title">Herramientas que deberás utilizar!!!</h2>
-        <div className="tools-carousel__slider-container">
+    <section className="bg-[#f8f9fa] py-12">
+      <div className="max-w-[1024px] mx-auto px-4 text-center">
+        <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold text-gray-800 mb-8">
+          Herramientas que deberás utilizar!!!
+        </h2>
+        <div className="relative overflow-hidden">
           <Slider {...settings}>
             {tools.map((tool, index) => (
-              <div key={index} className="tools-carousel__slide">
-                <div className="tools-carousel__item">
+              <div key={index} className="flex justify-center">
+                <div className="bg-white p-4 rounded shadow-md w-32 h-32 md:w-40 md:h-40 mx-auto flex items-center justify-center">
                   <img
                     src={tool.src}
                     alt={`Logo de ${tool.name}`}
-                    className="tools-carousel__img"
+                    className="max-w-full max-h-full object-contain transition-transform duration-300 ease-in-out hover:scale-105"
                   />
                 </div>
               </div>

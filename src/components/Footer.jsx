@@ -1,24 +1,40 @@
 import React from "react";
-import "../styles/Footer.css";  // Importa el CSS del Footer
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer__container">
-        <p className="footer__text">
+    <footer className="bg-gray-100 text-gray-700 py-6 text-center mt-10 border-t border-gray-200">
+      <div className="w-full max-w-[1200px] mx-auto px-4">
+        <p className="text-sm md:text-base">
           © 2025{" "}
-          <span className="footer__highlight">
+          <span className="font-semibold text-blue-500">
             Academia de Ciberseguridad
-          </span>. 
-          Todos los derechos reservados.
+          </span>
+          . Todos los derechos reservados.
         </p>
-        {/* <div className="footer__links">
-          <a href="#" className="footer__link">Política de Privacidad</a>
+        {/*
+        <div className="mt-3 flex justify-center gap-4">
+          <a
+            href="#"
+            className="font-medium transition-colors duration-200 ease-in-out hover:text-blue-500"
+          >
+            Política de Privacidad
+          </a>
           <span>|</span>
-          <a href="#" className="footer__link">Términos de Servicio</a>
+          <a
+            href="#"
+            className="font-medium transition-colors duration-200 ease-in-out hover:text-blue-500"
+          >
+            Términos de Servicio
+          </a>
           <span>|</span>
-          <a href="#" className="footer__link">Contacto</a>
-        </div> */}
+          <a
+            href="#"
+            className="font-medium transition-colors duration-200 ease-in-out hover:text-blue-500"
+          >
+            Contacto
+          </a>
+        </div>
+        */}
       </div>
     </footer>
   );
