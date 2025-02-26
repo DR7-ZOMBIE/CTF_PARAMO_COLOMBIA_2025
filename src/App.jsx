@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from "react";
 import { Route, HashRouter as Router, Routes } from "react-router-dom"; // Use HashRouter
 import AboutPage from "./components/AboutPage";
@@ -7,6 +6,7 @@ import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import ChallengesPage from "./components/ChallengesOverview";
 import TechnicalTalks from "./components/TechnicalTalks";
+// import CyberMovies from "./components/CyberMovies";
 import "./App.css";
 import "./index.css";
 
@@ -21,7 +21,8 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/challenges" element={<ChallengesPage />} />
             <Route path="/speaks" element={<TechnicalTalks />} />
-            {/* Optional: Redirect all unmatched routes to HomePage */}
+            {/* <Route path="/cybermovies" element={<CyberMovies />} /> */}
+            {/* Redirect all unmatched routes to HomePage */}
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
@@ -32,4 +33,3 @@ function App() {
 }
 
 export default App;
-

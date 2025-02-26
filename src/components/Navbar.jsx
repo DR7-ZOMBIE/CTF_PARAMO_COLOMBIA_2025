@@ -31,22 +31,28 @@ const Navbar = () => {
               Desafíos
             </Link>
           </li>
-           <li>
-              <Link
-                to="/speaks"
-                className="text-gray-700 font-medium transition-colors hover:text-blue-600"
-                onClick={() => setIsOpen(false)}
-              >
-                Charlas
-              </Link>
-            </li>
+          <li>
+            <Link
+              to="/speaks"
+              className="text-gray-700 font-medium transition-colors hover:text-blue-600"
+            >
+              Charlas
+            </Link>
+          </li>
+          {/* <li>
+            <Link
+              to="/cybermovies"
+              className="text-gray-700 font-medium transition-colors hover:text-blue-600"
+            >
+              CyberMovies
+            </Link>
+          </li> */}
           <li>
             <a
               href="https://www.meetup.com/paramo-ctf-colombia-2025/events/306328322/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-500 text-white font-bold py-2 px-5 rounded-lg transition-colors hover:bg-blue-600"
-              onClick={() => setIsOpen(false)}
             >
               Inscripción
             </a>
@@ -90,6 +96,15 @@ const Navbar = () => {
                 Charlas
               </Link>
             </li>
+            {/* <li>
+              <Link
+                to="/cybermovies"
+                className="text-gray-700 font-medium transition-colors hover:text-blue-600"
+                onClick={() => setIsOpen(false)}
+              >
+                CyberMovies
+              </Link>
+            </li> */}
             <li>
               <a
                 href="https://www.meetup.com/paramo-ctf-colombia-2025/events/306328322/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
