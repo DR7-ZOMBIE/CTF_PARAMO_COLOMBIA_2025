@@ -1,52 +1,79 @@
-# Páramo CTF Colombia 2025
+# ![Páramo CTF Logo](./src/assets/Logo_Paramo_CTF.png) Páramo CTF Colombia 2025
 
-¡Bienvenido a Páramo CTF Colombia 2025, el evento GRATUITO de ciberseguridad que reúne a los mejores talentos y entusiastas del área! Este evento está diseñado para ofrecerte una experiencia única y desafiante a través de competencias, charlas y una celebración inolvidable.
+¡Bienvenido a Páramo CTF Colombia 2025, el evento GRATUITO de ciberseguridad que reúne a los mejores talentos y entusiastas del área!
 
 ---
 
-## ¿Qué te espera en Páramo CTF 2025?
+## ¿Qué te espera en el evento?
 
-### Actividades del Evento
+<div align="center">
+  <img src="https://via.placeholder.com/800x300?text=Evento+P%C3%A1ramo+CTF+Colombia+2025" alt="Banner del Evento" style="max-width:100%;"/>
+</div>
+
+### Actividades principales
 - **24 de abril – CTF de Ciberseguridad**  
-  Demuestra tus habilidades en un desafiante Capture The Flag (CTF) que pondrá a prueba tu capacidad en seguridad informática. ¡Es el primer reto y el punto de partida para destacar en el mundo de la ciberseguridad!
+  Demuestra tus habilidades en un desafiante Capture The Flag (CTF) y conviértete en el héroe de la seguridad informática.
 
 - **25 de abril – Charlas Técnicas**  
-  Aprende de la mano de expertos con charlas que abordarán temas actuales y tendencias en ciberseguridad. Una oportunidad para inspirarte y expandir tus conocimientos.
+  Aprende de la mano de expertos con charlas que abordan las últimas tendencias y técnicas en ciberseguridad.
 
 - **26 de abril – Entrega de Premios**  
-  Celebra los logros del evento en una emocionante ceremonia de premiación donde se reconocerán a los equipos y participantes destacados con stickers, libros, certificaciones, y más.
+  Celebra los logros en una ceremonia de premiación con reconocimientos, stickers, libros, certificaciones, busos y camisas.
 
-### Oportunidades Futuras
+---
+
+## Oportunidades Futuras
+
+Además del emocionante evento de abril, ¡prepárate para nuevos retos!
+
 - **CyberSecurity Challenge (julio)**  
-  Prepárate para un nuevo reto que potenciará aún más tus habilidades en ciberseguridad.  
+  Desarrolla y potencia tus habilidades en ciberseguridad con este desafío de alto impacto.
+
 - **ICC – Competencia Internacional (final del año)**  
-  Compite a nivel internacional y demuestra que eres uno de los mejores en el ámbito de la ciberseguridad.  
-  Más información en [ICC Latinoamérica](https://icclatinoamerica.org/).
+  Demuestra tu capacidad a nivel global en la competencia insignia del año.  
+  Conoce más en [ICC Latinoamérica](https://icclatinoamerica.org/).
 
 ---
 
 ## Características de la Plataforma
 
 - **Registro de Equipos**  
-  Forma tu equipo de 5 integrantes a través de un proceso sencillo e interactivo. ¡Regístrate y asegura tu lugar en el evento!
+  Forma tu equipo de 5 integrantes de manera sencilla e interactiva.  
+  <div align="center">
+    <img src="https://via.placeholder.com/600x300?text=Registro+de+Equipos" alt="Registro de Equipos" style="max-width:100%;"/>
+  </div>
 
 - **Visualización de Equipos**  
-  Conoce a los equipos inscritos a través de un elegante carrusel que muestra el nombre (y la imagen, si decides cargarla) de cada equipo, resaltando la diversidad y talento del grupo.
+  Descubre a los equipos inscritos a través de un elegante carrusel interactivo que muestra el nombre (y, opcionalmente, la imagen) de cada equipo con colores únicos.
 
 - **Contador Dinámico**  
-  Un contador en tiempo real te informa cuánto falta para el inicio del evento, manteniéndote siempre al tanto del gran comienzo.
+  Mantente informado con un contador en tiempo real que te indica cuánto falta para el inicio del evento.
 
-- **Información de Ubicación**  
-  Consulta fácilmente dónde se llevará a cabo el evento en la Escuela de Ingeniería de Antioquia (EIA).
+- **Ubicación**  
+  Encuentra fácilmente dónde se llevará a cabo el evento en la Escuela de Ingeniería de Antioquia (EIA).
+
+---
+
+## ¡Regístrate y vive la experiencia!
+
+Los cupos son limitados. No pierdas la oportunidad de formar parte de una experiencia única en ciberseguridad.
+
+[**Regístrate ahora**](#/registro)
 
 ---
 
-## ¡No te lo pierdas!
+## Redes Sociales
 
-Este evento es más que una competencia: es una puerta de entrada a desafíos futuros y una oportunidad para conectarte con la comunidad de ciberseguridad. Los cupos son limitados, así que asegúrate de registrarte cuanto antes.
+Síguenos para enterarte de todas las novedades y actualizaciones del evento:
 
-[Regístrate ahora](#/registro)
+- ![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=facebook&logoColor=white)
+- ![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white)
+- ![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white)
 
 ---
+
+## Contacto
+
+Para más información y actualizaciones, visita nuestro sitio web o contáctanos en nuestras redes sociales.
 
 ¡Te esperamos en Páramo CTF Colombia 2025 para vivir una experiencia inolvidable en el mundo de la ciberseguridad!
