@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import logoParamoCTF from "../assets/Logo_Paramo_CTF.png";
 import CountdownTimer from "./CountdownTimer"; // Componente del contador
 
@@ -31,23 +32,34 @@ const HeroSection = () => {
               <h1 className="mb-6 font-extrabold text-5xl drop-shadow-lg">
                 Bienvenido a <span className="color-cycle">Páramo CTF Colombia</span>
               </h1>
-              <p className="mb-8 text-gray-700 text-lg leading-relaxed">
-                ¡Evento <strong className="text-gray-900">GRATUITO</strong> de Ciberseguridad 2025! <br className="hidden md:block" />
+              <p className="mb-6 text-gray-700 text-lg leading-relaxed">
+                ¡Evento <strong className="text-gray-900">GRATUITO</strong> de Ciberseguridad 2025!<br className="hidden md:block" />
                 Del <strong>24 al 26 de abril</strong> vive una experiencia única:
-                <br /><br />
-                <strong>24 de abril:</strong> demuestra tus habilidades en un desafiante CTF.
-                <br />
-                <strong>25 de abril:</strong> asiste a charlas técnicas impartidas por expertos.
-                <br />
-                <strong>26 de abril:</strong> celebra la entrega de premios: stickers, libros, certificaciones, busos y camisas.
               </p>
+              <p className="mb-8 text-gray-700 text-lg leading-relaxed">
+                <strong>24 de abril:</strong> CTF de Ciberseguridad, donde pondrás a prueba tus habilidades.<br />
+                <strong>25 de abril:</strong> Charlas técnicas de ciberseguridad impartidas por expertos.<br />
+                <strong>26 de abril:</strong> Entrega de premios y reconocimientos.
+              </p>
+              <p className="mb-8 text-gray-700 text-lg leading-relaxed">
+                Además, este evento es tu puerta de entrada a futuros desafíos: prepárate para el <strong>CyberSecurity Challenge</strong> en julio y para el <strong>ICC</strong> a final del año. 
+                Conoce más en&nbsp;
+                <a href="https://icclatinoamerica.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                  ICC Latinoamérica
+                </a>.
+              </p>
+              <div className="mb-8">
+                <p className="text-xl text-gray-800 font-semibold">
+                  ¡Forma tu equipo de <span className="text-blue-600">5 integrantes</span> y asegura tu lugar!
+                </p>
+              </div>
               <div className="flex flex-col items-center lg:items-start">
-                <a
-                  href="https://www.meetup.com/paramo-ctf-colombia-2025/events/306328322/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+                <Link
+                  to="/registro"
                   className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-xl transition transform hover:scale-105 hover:bg-blue-700"
                 >
                   Regístrate ahora
-                </a>
+                </Link>
                 <p className="mt-2 text-sm text-red-600 font-bold uppercase tracking-wide">
                   ¡Cupos limitados!
                 </p>
@@ -58,7 +70,7 @@ const HeroSection = () => {
               <img
                 src={logoParamoCTF}
                 alt="Logo de Páramo CTF Colombia - Evento Gratuito de Ciberseguridad 2025"
-                className="w-80 h-80 object-contain rounded-full border-4 border-blue-500 drop-shadow-2xl mb-8 transform transition duration-300 hover:scale-110"
+                className="w-80 h-80 object-cover rounded-full border-4 border-blue-500 drop-shadow-2xl mb-8 transform transition duration-300 hover:scale-110"
               />
               {/* Tarjeta del Contador */}
               <div className="bg-white bg-opacity-80 backdrop-filter backdrop-blur-md rounded-xl p-6 shadow-2xl">

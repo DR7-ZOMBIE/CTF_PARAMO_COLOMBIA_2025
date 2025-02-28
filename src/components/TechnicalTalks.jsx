@@ -3,46 +3,42 @@ import React from 'react';
 const TechnicalTalks = () => {
   const talks = [
     {
-      title: "Arquitectura Zero Trust en la era digital",
-      speaker: "Dra. Ana Torres",
-      date: "25 de abril, 2025",
-      description:
-        "Explora los principios y aplicaciones de la arquitectura Zero Trust para fortalecer la seguridad en entornos empresariales.",
+      "title": "Computación Forense Digital y Ciberdefensa",
+      "speaker": "Dr. Juan Manuel Madrid",
+      "date": "25 de abril, 2025",
+      "description": "Descubre cómo la computación forense digital y la arquitectura Zero Trust se combinan para detectar, analizar y mitigar amenazas cibernéticas en infraestructuras críticas."
     },
     {
-      title: "Nuevas amenazas en ciberseguridad",
-      speaker: "Dennis Patrick Juilland Prada",
-      date: "25 de abril, 2025",
-      description:
-        "Análisis de las amenazas emergentes y estrategias para mitigar riesgos en infraestructuras críticas.",
+      "title": "International Cybersecurity Challenge: Impulsando el Talento Latinoamericano",
+      "speaker": "Janett Garcia",
+      "date": "25 de abril, 2025",
+      "description": "Descubre cómo el equipo LATAM ha consolidado su presencia en el International Cybersecurity Challenge, fomentando el talento joven en ciberseguridad a nivel mundial. Exploraremos las competencias, los logros y el impacto del ICC en la región."
     },
     {
-      title: "Inteligencia artificial y seguridad",
-      speaker: "María Rodríguez",
-      date: "25 de abril, 2025",
-      description:
-        "Cómo la inteligencia artificial puede ayudar a detectar y prevenir ciberataques en tiempo real.",
+      "title": "Principios de Seguridad y Regulaciones en Protección de Datos",
+      "speaker": "MSc Arean Velasco",
+      "date": "25 de abril, 2025",
+      "description": "Explora los principios fundamentales de seguridad y las regulaciones clave en protección de datos, desde GDPR y CCPA hasta normativas latinoamericanas. Analizaremos su impacto en la ciberseguridad y las mejores prácticas para el cumplimiento legal."
     },
     {
-      title: "Ciberdefensa en la nube",
-      speaker: "Carlos Gómez",
-      date: "25 de abril, 2025",
-      description:
-        "Estrategias para proteger servicios y datos en entornos cloud frente a ataques avanzados.",
+      "title": "Amenazas Emergentes de Ciberseguridad",
+      "speaker": "MSc Dennis Patrick Juilland Prada",
+      "date": "25 de abril, 2025",
+      "description": "Un análisis profundo sobre las amenazas emergentes en ciberseguridad y su impacto. Exploraremos tácticas avanzadas utilizadas por atacantes, las vulnerabilidades más recientes y estrategias efectivas para proteger servicios y datos críticos."
     },
     {
-      title: "Respuesta a incidentes y forense digital",
-      speaker: "Lucía Fernández",
+      title: "Respuesta a Incidentes y Forense Digital",
+      speaker: "Dr. Enrique Santiago Chinchilla",
       date: "25 de abril, 2025",
       description:
         "Técnicas de respuesta a incidentes y análisis forense para identificar, contener y remediar brechas de seguridad.",
     },
     {
-      title: "Ciberseguridad en el internet de las cosas",
-      speaker: "Sofía Martínez",
+      title: "Rasomware: Jalar el cable o cómo actuar?",
+      speaker: "Ángel Alamillo",
       date: "25 de abril, 2025",
       description:
-        "Explora cómo asegurar dispositivos IoT y proteger la infraestructura conectada frente a ciberataques.",
+        "Exploraremos el impacto del ransomware, desde su evolución hasta las tácticas de ataque más sofisticadas. Analizaremos estrategias de respuesta, negociación y mitigación para minimizar daños y proteger activos críticos.",
     },
   ];
 

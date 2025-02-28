@@ -10,6 +10,7 @@ import eccouncilImg from "../assets/EC-COUNCIL.png";
 import owaspImg from "../assets/OWASP_black_logo.svg";
 import stcImg from "../assets/STC B1N cg.png";
 import certiprofImg from "../assets/Certiprof.png";
+import cybersecurityImg from "../assets/Cybersecurity.png";
 
 const PartnersCarousel = () => {
   const settings = {
@@ -36,6 +37,7 @@ const PartnersCarousel = () => {
     { src: owaspImg, name: "Partner 5" },
     { src: stcImg, name: "Partner 6" },
     { src: certiprofImg, name: "Partner 7" },
+    { src: cybersecurityImg, name: "Partner 8" },
   ];
 
   return (

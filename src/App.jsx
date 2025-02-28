@@ -1,16 +1,30 @@
-import React from "react";
-import { Route, HashRouter as Router, Routes } from "react-router-dom"; // Use HashRouter
+import React, { useState, useEffect } from "react";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import AboutPage from "./components/AboutPage";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import ChallengesPage from "./components/ChallengesOverview";
 import TechnicalTalks from "./components/TechnicalTalks";
-// import CyberMovies from "./components/CyberMovies";
+import RegistrationForm from "./components/RegistrationForm";
+import TeamsList from "./components/TeamsList";
 import "./App.css";
 import "./index.css";
 
 function App() {
+  // Cargar los equipos del localStorage al iniciar la app
+  const [teams, setTeams] = useState(() => {
+    const storedTeams = localStorage.getItem("teams");
+    return storedTeams ? JSON.parse(storedTeams) : [];
+  });
+
+  // Cada vez que cambie el estado, se guarda en localStorage
+  useEffect(() => {
+    localStorage.setItem("teams", JSON.stringify(teams));
+  }, [teams]);
+
+  const addTeam = (team) => setTeams([...teams, team]);
+
   return (
     <Router>
       <div className="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
@@ -21,8 +35,10 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/challenges" element={<ChallengesPage />} />
             <Route path="/speaks" element={<TechnicalTalks />} />
-            {/* <Route path="/cybermovies" element={<CyberMovies />} /> */}
-            {/* Redirect all unmatched routes to HomePage */}
+            {/* Ruta para registrar equipo */}
+            <Route path="/registro" element={<RegistrationForm addTeam={addTeam} />} />
+            {/* Ruta para ver equipos registrados */}
+            <Route path="/teams" element={<TeamsList teams={teams} />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
