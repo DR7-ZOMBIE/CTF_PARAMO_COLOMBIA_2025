@@ -1,12 +1,10 @@
-# Páramo CTF Colombia 2025
+# ![Páramo CTF Logo](./src/assets/Logo_Paramo_CTF.png) Páramo CTF Colombia 2025
 
-![Páramo CTF Logo](./src/assets/Logo_Paramo_CTF.png)
-
-Bienvenido a **Páramo CTF Colombia 2025**, el evento GRATUITO de ciberseguridad que reúne a talentos y entusiastas para vivir una experiencia única. ¡Descubre, aprende y compite en el mundo de la ciberseguridad!
+¡Bienvenido a **Páramo CTF Colombia 2025**! Este evento GRATUITO de ciberseguridad te reúne con talentos y entusiastas para vivir una experiencia única. ¡Descubre, aprende y compite en el fascinante mundo de la ciberseguridad!
 
 ---
 
-## ¿Qué te espera?
+## ¿Qué te espera en el evento?
 
 ### Actividades Principales (24-26 de abril)
 - **24 de abril – CTF de Ciberseguridad:**  
@@ -16,43 +14,43 @@ Bienvenido a **Páramo CTF Colombia 2025**, el evento GRATUITO de ciberseguridad
   Aprende de expertos en charlas que te mantendrán al día con las últimas tendencias en ciberseguridad.
   
 - **26 de abril – Entrega de Premios:**  
-  Celebra con nosotros en una emocionante ceremonia donde se reconocen los logros de los participantes.
+  Celebra en una emocionante ceremonia de premiación donde se reconocen los logros de los participantes.
 
 ---
 
 ## Oportunidades Futuras
 
-Además del evento de abril, tenemos dos grandes desafíos para que sigas potenciando tus habilidades:
+Además del emocionante evento de abril, prepárate para nuevos desafíos:
 
 - **CyberSecurity Challenge (julio):**  
-  Un nuevo reto que te ayudará a mejorar y destacar en el campo de la ciberseguridad.
+  Un reto para potenciar tus habilidades en ciberseguridad.
   
 - **ICC – Competencia Internacional (final del año):**  
-  Demuestra tu talento a nivel global. Conoce más en [ICC Latinoamérica](https://icclatinoamerica.org/).
+  Demuestra tu talento a nivel global en la competencia insignia.  
+  Conoce más en [ICC Latinoamérica](https://icclatinoamerica.org/).
 
 ---
 
-## ¿Qué Ofrece la Plataforma?
+## Características de la Plataforma
 
 - **Registro de Equipos:**  
-  Forma tu equipo de 5 integrantes de manera sencilla e interactiva.  
-  Cada equipo puede incluir un logo o imagen representativa que se mostrará en un carrusel con diseños únicos y vibrantes.
+  Forma tu equipo de 5 integrantes de manera sencilla e interactiva. Cada equipo puede incluir un logo o imagen representativa, que se mostrará en un carrusel con diseños únicos.
 
 - **Visualización de Equipos:**  
-  Explora un carrusel interactivo que destaca a los equipos registrados con colores y estilos personalizados.
+  Explora un carrusel interactivo que destaca a los equipos inscritos, mostrando el nombre y la imagen (opcional) de cada equipo con estilos personalizados.
 
 - **Contador Dinámico:**  
-  Mantente informado con un contador en tiempo real que te dice cuánto falta para el inicio del evento.
+  Un contador en tiempo real te informa cuánto falta para el inicio del evento.
 
 - **Ubicación:**  
-  El evento se llevará a cabo en la Escuela de Ingeniería de Antioquia (EIA). Consulta la ubicación exacta en nuestro mapa interactivo.
+  El evento se realizará en la Escuela de Ingeniería de Antioquia (EIA), y podrás consultarla mediante un mapa interactivo.
 
 ---
 
 ## ¡Regístrate Ahora!
 
-No pierdas la oportunidad de ser parte de esta experiencia inolvidable.  
-Accede a la página de registro en el siguiente enlace:
+No pierdas la oportunidad de ser parte de esta experiencia única.  
+Accede a la página de registro aquí:
 
 [**Regístrate Aquí**](https://dr7-zombie.github.io/CTF_PARAMO_COLOMBIA_2025/#/registro)
 
@@ -60,27 +58,14 @@ Accede a la página de registro en el siguiente enlace:
 
 ## Redes Sociales
 
-Mantente al tanto de todas las novedades y actualizaciones del evento:
+Sígueme en LinkedIn para conocer las últimas novedades:
 
-<div align="center">
-  <a href="https://www.facebook.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"/>
-  </a>
-  <a href="https://twitter.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
-  </a>
-  <a href="https://www.instagram.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
-  </a>
-</div>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dennis-patrick-j-a3362620b)
 
 ---
 
 ## ¡Te esperamos!
 
-Páramo CTF Colombia 2025 es más que un evento, es una oportunidad para conectar, aprender y competir en el fascinante mundo de la ciberseguridad.  
-¡No te quedes fuera y forma parte de esta experiencia única!
-
----
+Páramo CTF Colombia 2025 es más que un evento; es una oportunidad para conectar, aprender y competir en el mundo de la ciberseguridad. ¡No te quedes fuera y únete a esta experiencia inolvidable!
 
 *¡Cupos limitados!*
