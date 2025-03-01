@@ -50,7 +50,7 @@ const HeroSection = () => {
               </p>
               <div className="mb-8">
                 <p className="text-xl text-gray-800 font-semibold">
-                  ¡Forma tu equipo de <span className="text-blue-600">5 integrantes</span> y asegura tu lugar!
+                  El registro se realiza en equipos de <span className="text-blue-600">3 integrantes</span>, aunque también puedes participar en dúo o de manera individual, según tus capacidades.
                 </p>
               </div>
               <div className="flex flex-col items-center lg:items-start">

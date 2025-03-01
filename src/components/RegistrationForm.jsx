@@ -1,15 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const RegistrationForm = ({ addTeam }) => {
   const [teamName, setTeamName] = useState("");
-  const [memberName, setMemberName] = useState("");
-  const [memberEmail, setMemberEmail] = useState("");
-  const [members, setMembers] = useState([]);
-  const [emails, setEmails] = useState([]);
-  const [teamImage, setTeamImage] = useState(""); // Para almacenar la imagen en Base64
+  const [participantCount, setParticipantCount] = useState(1);
+  const [participants, setParticipants] = useState([{ name: "", email: "" }]);
+  const [teamImage, setTeamImage] = useState("");
   const navigate = useNavigate();
+
+  // Ajusta la cantidad de participantes cuando cambia participantCount
+  useEffect(() => {
+    setParticipants((prev) => {
+      const newParticipants = [...prev];
+      if (participantCount > prev.length) {
+        for (let i = prev.length; i < participantCount; i++) {
+          newParticipants.push({ name: "", email: "" });
+        }
+      } else if (participantCount < prev.length) {
+        newParticipants.splice(participantCount);
+      }
+      return newParticipants;
+    });
+  }, [participantCount]);
 
   // Manejo del input file para convertir la imagen a Base64
   const handleFileChange = (e) => {
@@ -23,42 +36,40 @@ const RegistrationForm = ({ addTeam }) => {
     }
   };
 
-  // Agregar integrante al presionar Enter en el input de nombre
-  const handleMemberNameKeyDown = (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      if (memberName.trim() !== "" && members.length < 5) {
-        setMembers([...members, memberName.trim()]);
-        setMemberName("");
-      }
-    }
-  };
-
-  // Agregar correo al presionar Enter en el input de email
-  const handleMemberEmailKeyDown = (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      if (memberEmail.trim() !== "" && emails.length < 5) {
-        setEmails([...emails, memberEmail.trim()]);
-        setMemberEmail("");
-      }
-    }
+  // Actualiza el campo (nombre o correo) del participante según su índice
+  const handleParticipantChange = (index, field, value) => {
+    setParticipants((prev) => {
+      const newParticipants = [...prev];
+      newParticipants[index] = { ...newParticipants[index], [field]: value };
+      return newParticipants;
+    });
   };
 
   // Manejo del envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (teamName.trim() === "" || members.length !== 5 || emails.length !== 5) {
+    if (teamName.trim() === "") {
       Swal.fire({
         title: "¡Error!",
-        text: "Por favor, completa el nombre del equipo, 5 nombres y 5 correos de integrantes.",
+        text: "Por favor, ingresa el nombre del equipo.",
         icon: "error",
         confirmButtonText: "Aceptar",
       });
       return;
     }
+    for (let i = 0; i < participantCount; i++) {
+      if (participants[i].name.trim() === "" || participants[i].email.trim() === "") {
+        Swal.fire({
+          title: "¡Error!",
+          text: `Completa el nombre y correo del integrante ${i + 1}.`,
+          icon: "error",
+          confirmButtonText: "Aceptar",
+        });
+        return;
+      }
+    }
 
-    const teamData = { teamName, members, emails, teamImage };
+    const teamData = { teamName, participants, teamImage };
 
     try {
       const response = await fetch("https://formspree.io/f/xovjgvjg", {
@@ -74,10 +85,10 @@ const RegistrationForm = ({ addTeam }) => {
           confirmButtonText: "Aceptar",
         }).then(() => {
           addTeam(teamData);
-          // Reseteamos el formulario
+          // Reiniciamos el formulario
           setTeamName("");
-          setMembers([]);
-          setEmails([]);
+          setParticipantCount(1);
+          setParticipants([{ name: "", email: "" }]);
           setTeamImage("");
           navigate("/teams");
         });
@@ -106,8 +117,7 @@ const RegistrationForm = ({ addTeam }) => {
           Registro de Equipo
         </h2>
         <p className="text-center text-sm text-gray-600 mb-6">
-          Cada equipo debe tener <strong>5 integrantes</strong>. Ingresa 5 nombres y 5 correos.  
-          Presiona "Enter" para agregar cada integrante.
+          Cada equipo puede tener entre <strong>1 y 3 integrantes</strong>. Selecciona la cantidad y completa la información.
         </p>
         <form onSubmit={handleSubmit}>
           {/* Nombre del equipo */}
@@ -124,59 +134,60 @@ const RegistrationForm = ({ addTeam }) => {
             />
           </div>
 
-          {/* Integrantes */}
+          {/* Selección de cantidad de integrantes */}
           <div className="mb-6">
             <label className="block text-lg font-semibold text-gray-700 mb-2">
-              Nombres de los integrantes (presiona Enter para agregar)
+              ¿Cuántos integrantes deseas registrar?
             </label>
-            <input
-              type="text"
-              value={memberName}
-              onChange={(e) => setMemberName(e.target.value)}
-              onKeyDown={handleMemberNameKeyDown}
-              placeholder="Ej. Juan Pérez"
-              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            />
-            <p className="text-xs text-gray-500 mt-1 italic">
-              Integrantes registrados: {members.length} / 5
-            </p>
-            {members.length > 0 && (
-              <ul className="mt-2 space-y-1">
-                {members.map((name, index) => (
-                  <li key={index} className="text-gray-600">
-                    {name}
-                  </li>
-                ))}
-              </ul>
-            )}
+            <div className="flex space-x-4">
+              {[1, 2, 3].map((count) => (
+                <label key={count} className="flex items-center space-x-1">
+                  <input
+                    type="radio"
+                    name="participantCount"
+                    value={count}
+                    checked={participantCount === count}
+                    onChange={(e) => setParticipantCount(parseInt(e.target.value))}
+                    className="form-radio"
+                  />
+                  <span>{count}</span>
+                </label>
+              ))}
+            </div>
           </div>
 
-          {/* Correos */}
-          <div className="mb-6">
-            <label className="block text-lg font-semibold text-gray-700 mb-2">
-              Correos de los integrantes (presiona Enter para agregar)
-            </label>
-            <input
-              type="email"
-              value={memberEmail}
-              onChange={(e) => setMemberEmail(e.target.value)}
-              onKeyDown={handleMemberEmailKeyDown}
-              placeholder="Ej. juan@correo.com"
-              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            />
-            <p className="text-xs text-gray-500 mt-1 italic">
-              Correos registrados: {emails.length} / 5
-            </p>
-            {emails.length > 0 && (
-              <ul className="mt-2 space-y-1">
-                {emails.map((email, index) => (
-                  <li key={index} className="text-gray-600">
-                    {email}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          {/* Integrantes */}
+          {participants.map((participant, index) => (
+            <div key={index} className="mb-6 border p-4 rounded-md">
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                Integrante {index + 1}
+              </h3>
+              <div className="mb-4">
+                <label className="block text-md font-medium text-gray-600 mb-1">
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  value={participant.name}
+                  onChange={(e) => handleParticipantChange(index, "name", e.target.value)}
+                  placeholder="Ej. Juan Pérez"
+                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                />
+              </div>
+              <div>
+                <label className="block text-md font-medium text-gray-600 mb-1">
+                  Correo
+                </label>
+                <input
+                  type="email"
+                  value={participant.email}
+                  onChange={(e) => handleParticipantChange(index, "email", e.target.value)}
+                  placeholder="Ej. juan@correo.com"
+                  className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                />
+              </div>
+            </div>
+          ))}
 
           {/* Imagen del equipo (opcional) */}
           <div className="mb-8">
