@@ -3,42 +3,42 @@ import React from 'react';
 const TechnicalTalks = () => {
   const talks = [
     {
-      "title": "Computación Forense Digital y Ciberdefensa",
+      "title": "Computación forense digital y ciberdefensa",
       "speaker": "Dr. Juan Manuel Madrid",
       "date": "25 de abril, 2025",
-      "description": "Descubre cómo la computación forense digital y la arquitectura Zero Trust se combinan para detectar, analizar y mitigar amenazas cibernéticas en infraestructuras críticas."
+      "description": "Explora la sinergia entre la computación forense digital y la arquitectura Zero Trust, comprendiendo cómo estas estrategias permiten la detección, análisis y mitigación eficaz de amenazas cibernéticas en infraestructuras críticas, fortaleciendo la seguridad y resiliencia organizacional."
     },
     {
-      "title": "International Cybersecurity Challenge: Impulsando el Talento Latinoamericano",
+      "title": "International Cybersecurity Challenge: Impulsando el talento",
       "speaker": "Janett Garcia",
       "date": "25 de abril, 2025",
       "description": "Descubre cómo el equipo LATAM ha consolidado su presencia en el International Cybersecurity Challenge, fomentando el talento joven en ciberseguridad a nivel mundial. Exploraremos las competencias, los logros y el impacto del ICC en la región."
     },
     {
-      "title": "Principios de Seguridad y Regulaciones en Protección de Datos",
+      "title": "Principios de seguridad y regulaciones en protección de datos",
       "speaker": "MSc Arean Velasco",
       "date": "25 de abril, 2025",
       "description": "Explora los principios fundamentales de seguridad y las regulaciones clave en protección de datos, desde GDPR y CCPA hasta normativas latinoamericanas. Analizaremos su impacto en la ciberseguridad y las mejores prácticas para el cumplimiento legal."
     },
     {
-      "title": "Amenazas Emergentes de Ciberseguridad",
+      "title": "Amenazas emergentes de ciberseguridad",
       "speaker": "MSc Dennis Patrick Juilland Prada",
       "date": "25 de abril, 2025",
       "description": "Un análisis profundo sobre las amenazas emergentes en ciberseguridad y su impacto. Exploraremos tácticas avanzadas utilizadas por atacantes, las vulnerabilidades más recientes y estrategias efectivas para proteger servicios y datos críticos."
     },
     {
-      title: "Respuesta a Incidentes y Forense Digital",
+      title: "Gestión y respuesta a incidentes de seguridad",
       speaker: "Dr. Enrique Santiago Chinchilla",
       date: "25 de abril, 2025",
       description:
-        "Técnicas de respuesta a incidentes y análisis forense para identificar, contener y remediar brechas de seguridad.",
+        "Enfoques estratégicos y técnicos para la respuesta a incidentes de ciberseguridad, abarcando metodologías de identificación, contención y mitigación de brechas de seguridad, junto con procedimientos de análisis para evaluar el impacto y prevenir futuras vulnerabilidades.",
     },
     {
-      title: "Rasomware: Jalar el cable o cómo actuar?",
+      title: "Ransomware: ¿Desconectar el sistema o cómo responder ante un ataque?",
       speaker: "Ángel Alamillo",
       date: "25 de abril, 2025",
       description:
-        "Exploraremos el impacto del ransomware, desde su evolución hasta las tácticas de ataque más sofisticadas. Analizaremos estrategias de respuesta, negociación y mitigación para minimizar daños y proteger activos críticos.",
+        "Analizaremos en profundidad el impacto del ransomware, desde su evolución y las tácticas de ataque más sofisticadas hasta las metodologías empleadas por los atacantes para maximizar su alcance. Exploraremos estrategias avanzadas de respuesta, negociación y mitigación.",
     },
   ];
 

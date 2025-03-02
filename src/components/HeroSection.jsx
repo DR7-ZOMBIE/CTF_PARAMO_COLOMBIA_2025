@@ -22,7 +22,6 @@ const HeroSection = () => {
       </style>
 
       <section className="relative py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
-        {/* Fondo decorativo opcional */}
         <div className="absolute inset-0 bg-pattern bg-no-repeat bg-center opacity-10 pointer-events-none"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -33,13 +32,17 @@ const HeroSection = () => {
                 Bienvenido a <span className="color-cycle">Páramo CTF Colombia</span>
               </h1>
               <p className="mb-6 text-gray-700 text-lg leading-relaxed">
-                ¡Evento <strong className="text-gray-900">GRATUITO</strong> de Ciberseguridad 2025!<br className="hidden md:block" />
+                ¡Evento <strong className="text-gray-900">GRATUITO</strong> de Ciberseguridad 2025! <br className="hidden md:block" />
                 Del <strong>24 al 26 de abril</strong> vive una experiencia única:
               </p>
               <p className="mb-8 text-gray-700 text-lg leading-relaxed">
                 <strong>24 de abril:</strong> CTF de Ciberseguridad, donde pondrás a prueba tus habilidades.<br />
                 <strong>25 de abril:</strong> Charlas técnicas de ciberseguridad impartidas por expertos.<br />
-                <strong>26 de abril:</strong> Entrega de premios y reconocimientos.
+                <strong>26 de abril:</strong> <span className="text-blue-600 font-bold">¡Gran premiación y cierre del evento!</span>
+              </p>
+              <p className="mb-8 text-gray-700 text-lg leading-relaxed">
+                Los equipos ganadores del CTF recibirán <span className="text-blue-600 font-bold">certificaciones de ciberseguridad avaladas por la industria</span>, además de increíbles premios como <span className="text-red-600 font-bold">camisas, buzos representativos</span> y más. 
+                Para el resto de los participantes, tendremos <span className="text-green-600 font-bold">rifas, sorpresas y mucho más.</span> ¡Nadie se va con las manos vacías!
               </p>
               <p className="mb-8 text-gray-700 text-lg leading-relaxed">
                 Además, este evento es tu puerta de entrada a futuros desafíos: prepárate para el <strong>CyberSecurity Challenge</strong> en julio y para el <strong>ICC</strong> a final del año. 
