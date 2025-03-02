@@ -1,79 +1,47 @@
-import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useEffect } from "react";
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "../firebase";
 
-const TeamsList = ({ teams }) => {
-  // Determinamos cuántas tarjetas mostrar según la cantidad de equipos
-  const slidesToShow = teams.length < 3 ? teams.length : 3;
-  
-  // Array de clases de colores para los nombres
-  const colorClasses = [
-    "text-indigo-600", 
-    "text-blue-600", 
-    "text-red-600", 
-    "text-green-600", 
-    "text-purple-600", 
-    "text-orange-600"
-  ];
-  
-  const settings = {
-    dots: true,
-    infinite: teams.length > slidesToShow,
-    speed: 600,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: teams.length < 2 ? teams.length : 2,
-          slidesToScroll: 1,
-          infinite: teams.length > 2,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1, slidesToScroll: 1, dots: true }
-      }
-    ]
-  };
+const TeamsList = () => {
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, "teams"), (snapshot) => {
+      const teamsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setTeams(teamsData);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 py-12 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl m-10 font-extrabold text-center text-gray-800 mb-6">
-          Equipos registrados
-        </h2>
-        {teams.length === 0 ? (
-          <p className="text-center text-lg text-gray-600 mt-10">
-            No hay equipos registrados aún.
-          </p>
-        ) : (
-          <Slider {...settings}>
-            {teams.map((team, index) => (
-              <div key={index} className="px-4">
-                <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center min-h-[16rem] transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                  {team.teamImage && (
-                    <img
-                      src={team.teamImage}
-                      alt={team.teamName}
-                      className="w-24 h-24 object-cover rounded-full border-2 border-gray-200 mb-4"
-                    />
-                  )}
-                  <h3 className={`text-2xl font-bold text-center ${colorClasses[index % colorClasses.length]}`}>
-                    {team.teamName}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        )}
-      </div>
+    <div className="container mx-auto px-4 mt-8 mb-12">
+      {/* Título con tamaño optimizado para móvil */}
+      <h2 className="text-2xl m-24 md:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-10">
+        Equipos Registrados
+      </h2>
+
+      {teams.length === 0 ? (
+        <p className="text-center text-lg text-gray-600">No hay equipos registrados aún.</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {teams.map((team) => (
+            <div
+              key={team.id}
+              className="bg-white p-4 md:p-5 rounded-xl shadow-md text-center flex flex-col items-center"
+            >
+              {team.teamImage && (
+                <img
+                  src={team.teamImage}
+                  alt={team.teamName}
+                  className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 md:mb-4 rounded-full border"
+                />
+              )}
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800">{team.teamName}</h3>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
