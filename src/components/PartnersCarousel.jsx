@@ -13,6 +13,7 @@ import certiprofImg from "../assets/Certiprof.png";
 import cybersecurityImg from "../assets/Cybersecurity.png";
 import dsteam from "../assets/DSTEAM.webp";
 import eafit from "../assets/eafit.jpg";
+import mesa from "../assets/Mesa de trabajo 1.png"
 
 const PartnersCarousel = () => {
   const settings = {
@@ -42,6 +43,7 @@ const PartnersCarousel = () => {
     { src: cybersecurityImg, name: "Partner 8" },
     { src: dsteam, name: "Partner 9" },
     { src: eafit, name: "Partner 10" },
+    { src: mesa, name: "Partner 11"},
   ];
 
   return (
