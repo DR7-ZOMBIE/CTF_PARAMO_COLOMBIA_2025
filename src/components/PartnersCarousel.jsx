@@ -14,6 +14,8 @@ import cybersecurityImg from "../assets/Cybersecurity.png";
 import dsteam from "../assets/DSTEAM.webp";
 import eafit from "../assets/eafit.jpg";
 import mesa from "../assets/Mesa de trabajo 1.png"
+import dragon from "../assets/Dragon.png"
+import fluid from "../assets/fluid.png";
 
 const PartnersCarousel = () => {
   const settings = {
@@ -44,6 +46,8 @@ const PartnersCarousel = () => {
     { src: dsteam, name: "Partner 9" },
     { src: eafit, name: "Partner 10" },
     { src: mesa, name: "Partner 11"},
+    { src: dragon, name: "Partner 12"},
+    { src: fluid, name: "Partner 13"}
   ];
 
   return (

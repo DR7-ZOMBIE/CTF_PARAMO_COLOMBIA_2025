@@ -51,6 +51,10 @@ const HeroSection = () => {
                   ICC Latinoamérica
                 </a>.
               </p>
+              {/* Párrafo optimizado para SEO sobre DragonjarCon */}
+              <p className="mb-8 text-gray-700 text-lg leading-relaxed">
+                Descubre <a href="https://www.dragonjarcon.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-bold">DragonjarCon</a>, el evento insignia en innovación y ciberseguridad que conecta a profesionales, entusiastas y expertos del sector. Aprovecha esta oportunidad única para expandir tu red de contactos, aprender de líderes de la industria y descubrir las últimas tendencias en seguridad digital. ¡Asegura tu inscripción y forma parte de la revolución en tecnología y seguridad!
+              </p>
               <div className="mb-8">
                 <p className="text-xl text-gray-800 font-semibold">
                   El registro se realiza en equipos de <span className="text-blue-600">3 integrantes</span>, aunque también puedes participar en dúo o de manera individual, según tus capacidades.
