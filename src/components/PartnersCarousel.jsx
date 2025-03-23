@@ -16,6 +16,7 @@ import eafit from "../assets/eafit.jpg";
 import mesa from "../assets/Mesa de trabajo 1.png"
 import dragon from "../assets/Dragon.png"
 import fluid from "../assets/fluid.png";
+import netsecteam from "../assets/netsecteam.png";
 
 const PartnersCarousel = () => {
   const settings = {
@@ -47,7 +48,8 @@ const PartnersCarousel = () => {
     { src: eafit, name: "Partner 10" },
     { src: mesa, name: "Partner 11"},
     { src: dragon, name: "Partner 12"},
-    { src: fluid, name: "Partner 13"}
+    { src: fluid, name: "Partner 13"},
+    { src: netsecteam, name: "Partner 14"}
   ];
 
   return (
