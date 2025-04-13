@@ -17,6 +17,7 @@ import mesa from "../assets/Mesa de trabajo 1.png"
 import dragon from "../assets/Dragon.png"
 import fluid from "../assets/fluid.png";
 import netsecteam from "../assets/netsecteam.png";
+import aligo from "../assets/Aligo.png";
 
 const PartnersCarousel = () => {
   const settings = {
@@ -49,7 +50,8 @@ const PartnersCarousel = () => {
     { src: mesa, name: "Partner 11"},
     { src: dragon, name: "Partner 12"},
     { src: fluid, name: "Partner 13"},
-    { src: netsecteam, name: "Partner 14"}
+    { src: netsecteam, name: "Partner 14"},
+    { src: aligo, name: "Partner 15"},
   ];
 
   return (

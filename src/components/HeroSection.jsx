@@ -36,9 +36,9 @@ const HeroSection = () => {
                 Del <strong>24 al 26 de abril</strong> vive una experiencia única:
               </p>
               <p className="mb-8 text-gray-700 text-lg leading-relaxed">
-                <strong>24 de abril:</strong> CTF de Ciberseguridad, donde pondrás a prueba tus habilidades.<br />
-                <strong>25 de abril:</strong> Charlas técnicas de ciberseguridad impartidas por expertos.<br />
-                <strong>26 de abril:</strong> <span className="text-blue-600 font-bold">¡Gran premiación y cierre del evento!</span>
+                <strong>24 de abril [8 a.m - 5 p.m]:</strong> CTF de Ciberseguridad, donde pondrás a prueba tus habilidades.<br />
+                <strong>25 de abril [8 a.m - 5 p.m]:</strong> Charlas técnicas de ciberseguridad impartidas por expertos.<br />
+                <strong>26 de abril [10 a.m - 12 p.m]:</strong> <span className="text-blue-600 font-bold">¡Gran premiación y cierre del evento!</span>
               </p>
               <p className="mb-8 text-gray-700 text-lg leading-relaxed">
                 Los equipos ganadores del CTF recibirán <span className="text-blue-600 font-bold">certificaciones de ciberseguridad avaladas por la industria</span>, además de increíbles premios como <span className="text-red-600 font-bold">camisas, buzos representativos</span> y más. 

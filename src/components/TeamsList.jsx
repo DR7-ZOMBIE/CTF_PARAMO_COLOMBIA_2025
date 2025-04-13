@@ -8,7 +8,23 @@ const TeamsList = () => {
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "teams"), (snapshot) => {
       const teamsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setTeams(teamsData);
+
+      // Filtramos para dejar sólo un equipo por cada teamName
+      const uniqueTeams = [];
+      const namesSeen = new Set();
+
+      for (const team of teamsData) {
+        if (!namesSeen.has(team.teamName)) {
+          namesSeen.add(team.teamName);
+          uniqueTeams.push(team);
+        } else {
+          // Opcionalmente, podrías eliminar el duplicado de la base de datos 
+          // si realmente quieres "eliminarlo" del sistema:
+          // await deleteDoc(doc(db, "teams", team.id));
+        }
+      }
+
+      setTeams(uniqueTeams);
     });
 
     return () => unsubscribe();
@@ -16,7 +32,6 @@ const TeamsList = () => {
 
   return (
     <div className="container mx-auto px-4 mt-8 mb-12">
-      {/* Título con tamaño optimizado para móvil */}
       <h2 className="text-2xl m-24 md:text-3xl font-bold text-center text-gray-800 mb-6 md:mb-10">
         Equipos Registrados
       </h2>
@@ -37,7 +52,9 @@ const TeamsList = () => {
                   className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 md:mb-4 rounded-full border"
                 />
               )}
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800">{team.teamName}</h3>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800">
+                {team.teamName}
+              </h3>
             </div>
           ))}
         </div>

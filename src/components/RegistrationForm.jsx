@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase"; // Importamos Firestore desde nuestra configuración
+import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 
 const RegistrationForm = () => {
   const [teamName, setTeamName] = useState("");
@@ -25,7 +25,6 @@ const RegistrationForm = () => {
     });
   }, [participantCount]);
 
-  // Manejo del input file para convertir la imagen a Base64
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -48,6 +47,7 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validaciones de campos
     if (teamName.trim() === "") {
       Swal.fire("¡Error!", "Por favor, ingresa el nombre del equipo.", "error");
       return;
@@ -60,16 +60,27 @@ const RegistrationForm = () => {
       }
     }
 
-    const teamData = { teamName, participants, teamImage };
-
+    // 1. Hacemos la consulta a Firestore para verificar si ya existe el equipo con el mismo nombre
     try {
+      const q = query(collection(db, "teams"), where("teamName", "==", teamName));
+      const querySnapshot = await getDocs(q);
+
+      if (!querySnapshot.empty) {
+        // Si encuentra al menos un documento con el mismo nombre, mostramos el error y salimos
+        Swal.fire("¡Error!", "Ya existe un equipo registrado con este nombre.", "error");
+        return;
+      }
+
+      // 2. Si llegamos aquí, significa que no hay duplicado, entonces creamos el equipo
+      const teamData = { teamName, participants, teamImage };
+
       await addDoc(collection(db, "teams"), teamData);
       Swal.fire("¡Registro Exitoso!", "El equipo se ha registrado correctamente.", "success").then(() => {
         setTeamName("");
         setParticipantCount(1);
         setParticipants([{ name: "", email: "" }]);
         setTeamImage("");
-        navigate("/teams"); // Redirige a la página de equipos registrados
+        navigate("/teams");
       });
     } catch (error) {
       Swal.fire("Error", "No se pudo registrar el equipo. " + error.message, "error");
@@ -140,7 +151,7 @@ const RegistrationForm = () => {
             </div>
           ))}
 
-          {/* Imagen representativa del equipo */}
+          {/* Imagen representativa del equipo (opcional) */}
           <div className="mb-6">
             <label className="block text-lg font-semibold text-gray-700 mb-2">
               Imagen representativa del equipo (opcional)
