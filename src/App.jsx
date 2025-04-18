@@ -8,6 +8,7 @@ import ChallengesPage from "./components/ChallengesOverview";
 import TechnicalTalks from "./components/TechnicalTalks";
 import RegistrationForm from "./components/RegistrationForm";
 import TeamsList from "./components/TeamsList";
+// import ExtraerEmails from "./extraerEmails.jsx"; // ✅
 import "./App.css";
 import "./index.css";
 
@@ -26,6 +27,8 @@ function App() {
   const addTeam = (team) => setTeams([...teams, team]);
 
   return (
+    <>
+   
     <Router>
       <div className="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
         <Navbar />
@@ -45,6 +48,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </>
   );
 }
 
