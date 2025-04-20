@@ -27,8 +27,7 @@ function App() {
   const addTeam = (team) => setTeams([...teams, team]);
 
   return (
-    <>
-   
+    <> 
     <Router>
       <div className="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
         <Navbar />
