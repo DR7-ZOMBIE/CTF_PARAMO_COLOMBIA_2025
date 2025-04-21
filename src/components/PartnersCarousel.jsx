@@ -18,6 +18,7 @@ import dragon from "../assets/Dragon.png"
 import fluid from "../assets/fluid.png";
 import netsecteam from "../assets/netsecteam.png";
 import aligo from "../assets/Aligo.png";
+import certjoin from "../assets/certjoin.png";
 
 const PartnersCarousel = () => {
   const settings = {
@@ -52,6 +53,7 @@ const PartnersCarousel = () => {
     { src: fluid, name: "Partner 13"},
     { src: netsecteam, name: "Partner 14"},
     { src: aligo, name: "Partner 15"},
+    { src: certjoin, name: "Partner 16"},
   ];
 
   return (

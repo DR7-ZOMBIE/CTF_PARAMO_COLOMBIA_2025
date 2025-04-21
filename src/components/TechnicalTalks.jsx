@@ -42,10 +42,19 @@ const TechnicalTalks = () => {
       image: start
     },
     {
+      title: 'Gestión y respuesta a incidentes de seguridad',
+      speaker: 'Dr. Enrique Santiago Chinchilla',
+      date: '25 de abril, 2025',
+      time: '11:00 a.m. - 12:00 p.m.',
+      description:
+        'Enfoques estratégicos y técnicos para la respuesta a incidentes de ciberseguridad, abarcando metodologías de identificación, contención y mitigación de brechas de seguridad, junto con procedimientos de análisis para evaluar el impacto y prevenir futuras vulnerabilidades.',
+      image: nist
+    },
+    {
       title: 'Introducción al Game Hacking',
       speaker: 'Alejandro Monsalve',
       date: '25 de abril, 2025',
-      time: '11:00 a.m. - 12:00 p.m.',
+      time: '1:00 p.m. - 2:00 p.m.',
       description:
         'Exploración de conceptos fundamentales del funcionamiento de la memoria (Stack/Heap), introducción al Assembly básico y aplicación práctica de Game Hacking utilizando Cheat Engine.',
       image: game
@@ -54,20 +63,12 @@ const TechnicalTalks = () => {
       title: 'Computación forense digital y ciberdefensa',
       speaker: 'Dr. Juan Manuel Madrid',
       date: '25 de abril, 2025',
-      time: '1:00 p.m. - 2:00 p.m.',
+      time: '2:00 p.m. - 3:00 p.m.',
       description:
         'Explora la sinergia entre la computación forense digital y la arquitectura Zero Trust, comprendiendo cómo estas estrategias permiten la detección, análisis y mitigación eficaz de amenazas cibernéticas en infraestructuras críticas, fortaleciendo la seguridad y resiliencia organizacional.',
       image: forense
     },
-    {
-      title: 'Ransomware: ¿Desconectar el sistema o cómo responder ante un ataque?',
-      speaker: 'Ángel Alamillo Diaz',
-      date: '25 de abril, 2025',
-      time: '2:00 p.m. - 3:00 p.m.',
-      description:
-        'Analizaremos en profundidad el impacto del ransomware, desde su evolución y las tácticas de ataque más sofisticadas hasta las metodologías empleadas por los atacantes para maximizar su alcance. Exploraremos estrategias avanzadas de respuesta, negociación y mitigación.',
-      image: ransomware
-    },
+    
     {
       title: 'Principios de seguridad y regulaciones en protección de datos',
       speaker: 'MSc Arean Velasco',
@@ -78,13 +79,13 @@ const TechnicalTalks = () => {
       image: delitos
     },
     {
-      title: 'Gestión y respuesta a incidentes de seguridad',
-      speaker: 'Dr. Enrique Santiago Chinchilla',
+      title: 'Ransomware: ¿Desconectar el sistema o cómo responder ante un ataque?',
+      speaker: 'Ángel Alamillo Diaz',
       date: '25 de abril, 2025',
       time: '4:00 p.m. - 5:00 p.m.',
       description:
-        'Enfoques estratégicos y técnicos para la respuesta a incidentes de ciberseguridad, abarcando metodologías de identificación, contención y mitigación de brechas de seguridad, junto con procedimientos de análisis para evaluar el impacto y prevenir futuras vulnerabilidades.',
-      image: nist
+        'Analizaremos en profundidad el impacto del ransomware, desde su evolución y las tácticas de ataque más sofisticadas hasta las metodologías empleadas por los atacantes para maximizar su alcance. Exploraremos estrategias avanzadas de respuesta, negociación y mitigación.',
+      image: ransomware
     },
     {
       title: 'Purple Team: Inteligencia ofensiva y defensa integrada',
